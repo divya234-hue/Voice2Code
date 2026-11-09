@@ -1,0 +1,36 @@
+.env
+.env.*
+!backend/.env.example
+
+# IDE
+.vscode/
+
+# Experiment outputs
+*.log
+outputs/
+checkpoints/
+
+# Competition datasets
+data/raw/
+data/snapshots/
+data/embeddings/
+data/graphs/
+data/wheels/
+
+# Python environments
+venv/
+.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

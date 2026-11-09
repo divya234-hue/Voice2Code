@@ -1,0 +1,35 @@
+
+name: gemma_coding_agent
+
+model: gemma-4-e4b-it-qat-w4a16-ct
+
+description: >
+  An autonomous software engineering agent that investigates repository
+  issues, analyzes code dependencies, identifies root causes, implements
+  minimal fixes, executes tests, and submits verified patches.
+
+instruction: !include prompts/system.md
+
+tools:
+  - run_command
+  - read_file
+  - edit_file
+  - write_file
+  - get_status
+  - submit_patch
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph
+
+  - agent_tool:
+      config_path: sub_agents/code_analyzer.yaml
+      skip_summarization: true
+
+generate_content_config:
+  thinking_config:
+    thinking_budget: 4096
+    include_thoughts: true
+  max_output_tokens: 16384
+
+sub_agents:
+  - config_path: sub_agents/tester.yaml

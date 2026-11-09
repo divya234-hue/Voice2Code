@@ -1,0 +1,15 @@
+name: code_analyzer
+model: gemma-4-e4b-it-qat-w4a16-ct
+
+description: >
+  A read-only code analysis specialist that investigates repository
+  structure, identifies relevant code, traces dependencies, and reports
+  likely root causes to the main coding agent.
+
+instruction: !include prompts/analyzer.md
+
+tools:
+  - read_file
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph

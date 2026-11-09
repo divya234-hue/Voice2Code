@@ -1,0 +1,14 @@
+name: tester
+model: gemma-4-e4b-it-qat-w4a16-ct
+
+description: >
+  A read-only software testing specialist that reviews code changes,
+  identifies relevant tests, evaluates edge cases, and reports
+  potential regressions.
+
+instruction: !include prompts/tester.md
+tools:
+  - read_file
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph

@@ -1,0 +1,29 @@
+{
+  "experiment_id": "gemma4-e4b-baseline-v1",
+  "project": "Gemma 4 Autonomous Coding Agent",
+  "model": "gemma-4-e4b-it-qat-w4a16-ct",
+  "variant": "multi_agent",
+  "status": "not_evaluated",
+  "architecture": {
+    "root_agent": true,
+    "code_analyzer": true,
+    "testing_agent": true
+  },
+  "evaluation": {
+    "validation_task_ids": [],
+    "total_tasks": 0,
+    "resolved_tasks": 0,
+    "resolution_rate": null,
+    "elapsed_seconds": null,
+    "max_tool_calls": 100,
+    "max_time_minutes": 60
+  },
+  "failure_analysis": {
+    "localization_failures": 0,
+    "diagnosis_failures": 0,
+    "editing_failures": 0,
+    "testing_failures": 0,
+    "submission_failures": 0
+  },
+  "notes": "Initial E4B baseline. Official harness evaluation pending."
+}
